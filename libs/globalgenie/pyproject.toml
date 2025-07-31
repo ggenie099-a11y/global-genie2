@@ -1,7 +1,7 @@
 [project]
 name = "globalgenie"
-version = "1.0.0"
-description = "GlobalGenie: The Complete AI Agent Framework for building intelligent, autonomous agents with memory, reasoning, and multi-modal capabilities"
+version = "2.0.0"
+description = "GlobalGenie: The Complete AI Agent Framework for building intelligent, autonomous agents with memory, reasoning, and multi-modal capabilities - Now with comprehensive testing strategy and 100% validation"
 requires-python = ">=3.8,<4"
 readme = "README.md"
 license = { text = "MIT" }
