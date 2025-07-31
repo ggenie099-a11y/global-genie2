@@ -1,0 +1,24 @@
+from globalgenie.agent import Agent
+from globalgenie.models.openai import OpenAIChat
+from globalgenie.utils.audio import write_audio_to_file
+
+agent = Agent(
+    model=OpenAIChat(
+        id="gpt-4o-audio-preview",
+        modalities=["text", "audio"],
+        audio={"voice": "sage", "format": "wav"},
+    ),
+    add_history_to_messages=True,
+)
+
+agent.run("Is a golden retriever a good family dog?")
+if agent.run_response.response_audio is not None:
+    write_audio_to_file(
+        audio=agent.run_response.response_audio.content, filename="tmp/answer_1.wav"
+    )
+
+agent.run("Why do you say they are loyal?")
+if agent.run_response.response_audio is not None:
+    write_audio_to_file(
+        audio=agent.run_response.response_audio.content, filename="tmp/answer_2.wav"
+    )

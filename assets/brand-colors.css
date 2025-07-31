@@ -1,0 +1,58 @@
+/* GlobalGenie Brand Colors */
+:root {
+  /* Primary Colors */
+  --gg-primary-blue: #1a365d;
+  --gg-accent-gold: #d69e2e;
+  
+  /* Secondary Colors */
+  --gg-light-blue: #3182ce;
+  --gg-dark-navy: #0f1419;
+  --gg-soft-gold: #f7fafc;
+  
+  /* Neutral Colors */
+  --gg-white: #ffffff;
+  --gg-light-gray: #f7fafc;
+  --gg-medium-gray: #718096;
+  --gg-dark-gray: #2d3748;
+  
+  /* Semantic Colors */
+  --gg-success: #38a169;
+  --gg-warning: #d69e2e;
+  --gg-error: #e53e3e;
+  --gg-info: #3182ce;
+  
+  /* Text Colors */
+  --gg-text-primary: #2d3748;
+  --gg-text-secondary: #718096;
+  --gg-text-muted: #a0aec0;
+  --gg-text-inverse: #ffffff;
+  
+  /* Background Colors */
+  --gg-bg-primary: #ffffff;
+  --gg-bg-secondary: #f7fafc;
+  --gg-bg-tertiary: #edf2f7;
+  --gg-bg-dark: #0f1419;
+  
+  /* Border Colors */
+  --gg-border-light: #e2e8f0;
+  --gg-border-medium: #cbd5e0;
+  --gg-border-dark: #4a5568;
+  
+  /* Shadow Colors */
+  --gg-shadow-sm: 0 1px 3px 0 rgba(26, 54, 93, 0.1), 0 1px 2px 0 rgba(26, 54, 93, 0.06);
+  --gg-shadow-md: 0 4px 6px -1px rgba(26, 54, 93, 0.1), 0 2px 4px -1px rgba(26, 54, 93, 0.06);
+  --gg-shadow-lg: 0 10px 15px -3px rgba(26, 54, 93, 0.1), 0 4px 6px -2px rgba(26, 54, 93, 0.05);
+  --gg-shadow-xl: 0 20px 25px -5px rgba(26, 54, 93, 0.1), 0 10px 10px -5px rgba(26, 54, 93, 0.04);
+}
+
+/* Dark theme overrides */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --gg-bg-primary: #0f1419;
+    --gg-bg-secondary: #1a202c;
+    --gg-bg-tertiary: #2d3748;
+    --gg-text-primary: #f7fafc;
+    --gg-text-secondary: #e2e8f0;
+    --gg-text-muted: #a0aec0;
+  }
+}

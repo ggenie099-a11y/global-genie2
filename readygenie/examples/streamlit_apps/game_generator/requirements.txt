@@ -1,0 +1,4 @@
+globalgenie
+openai
+streamlit
+

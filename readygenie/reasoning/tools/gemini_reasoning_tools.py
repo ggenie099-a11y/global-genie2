@@ -1,0 +1,28 @@
+from globalgenie.agent import Agent
+from globalgenie.models.google import Gemini
+from globalgenie.tools.reasoning import ReasoningTools
+from globalgenie.tools.yfinance import YFinanceTools
+
+reasoning_agent = Agent(
+    model=Gemini(id="gemini-2.5-pro-preview-03-25"),
+    tools=[
+        ReasoningTools(
+            think=True,
+            analyze=True,
+            add_instructions=True,
+        ),
+        YFinanceTools(
+            stock_price=True,
+            analyst_recommendations=True,
+            company_info=True,
+            company_news=True,
+        ),
+    ],
+    instructions="Use tables where possible",
+    stream_intermediate_steps=True,
+    show_tool_calls=True,
+    markdown=True,
+)
+reasoning_agent.print_response(
+    "Write a report comparing NVDA to TSLA.", show_full_reasoning=True
+)

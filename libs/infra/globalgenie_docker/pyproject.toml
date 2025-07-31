@@ -1,0 +1,59 @@
+[project]
+name = "globalgenie-docker"
+version = "0.0.1"
+description = "Docker containerization and orchestration resources for GlobalGenie AI agents"
+requires-python = ">=3.7"
+readme = "README.md"
+authors = [
+  {name = "Rahul Edward", email = "rahuledward@globalgenie.com"}
+]
+
+dependencies = [
+  "docker",
+]
+
+[project.optional-dependencies]
+dev = [
+  "mypy",
+  "pytest",
+  "ruff",
+]
+
+[project.urls]
+homepage = "https://globalgenie.com"
+documentation = "https://docs.globalgenie.com/deployment/docker"
+repository = "https://github.com/globalgenie-agi/globalgenie"
+issues = "https://github.com/globalgenie-agi/globalgenie/issues"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["globalgenie*"]
+
+[tool.setuptools.package-data]
+globalgenie = ["py.typed"]
+
+[tool.pytest.ini_options]
+log_cli = true
+testpaths = "tests"
+
+[tool.ruff]
+line-length = 120
+# Ignore `F401` (import violations) in all `__init__.py` files
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401"]
+
+[tool.mypy]
+check_untyped_defs = true
+no_implicit_optional = true
+warn_unused_configs = true
+plugins = ["pydantic.mypy"]
+
+[[tool.mypy.overrides]]
+module = [
+  "globalgenie.*",
+  "docker.*",
+]
+ignore_missing_imports = true

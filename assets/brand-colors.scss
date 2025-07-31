@@ -1,0 +1,111 @@
+// GlobalGenie Brand Colors - SCSS Variables
+
+// Primary Colors
+$gg-primary-blue: #1a365d;
+$gg-accent-gold: #d69e2e;
+
+// Secondary Colors
+$gg-light-blue: #3182ce;
+$gg-dark-navy: #0f1419;
+$gg-soft-gold: #f7fafc;
+
+// Neutral Colors
+$gg-white: #ffffff;
+$gg-light-gray: #f7fafc;
+$gg-medium-gray: #718096;
+$gg-dark-gray: #2d3748;
+
+// Semantic Colors
+$gg-success: #38a169;
+$gg-warning: #d69e2e;
+$gg-error: #e53e3e;
+$gg-info: #3182ce;
+
+// Text Colors
+$gg-text-primary: #2d3748;
+$gg-text-secondary: #718096;
+$gg-text-muted: #a0aec0;
+$gg-text-inverse: #ffffff;
+
+// Background Colors
+$gg-bg-primary: #ffffff;
+$gg-bg-secondary: #f7fafc;
+$gg-bg-tertiary: #edf2f7;
+$gg-bg-dark: #0f1419;
+
+// Border Colors
+$gg-border-light: #e2e8f0;
+$gg-border-medium: #cbd5e0;
+$gg-border-dark: #4a5568;
+
+// Color Maps for easier access
+$gg-colors: (
+  "primary": $gg-primary-blue,
+  "accent": $gg-accent-gold,
+  "light-blue": $gg-light-blue,
+  "dark-navy": $gg-dark-navy,
+  "success": $gg-success,
+  "warning": $gg-warning,
+  "error": $gg-error,
+  "info": $gg-info
+);
+
+$gg-grays: (
+  "50": #f7fafc,
+  "100": #edf2f7,
+  "200": #e2e8f0,
+  "300": #cbd5e0,
+  "400": #a0aec0,
+  "500": #718096,
+  "600": #4a5568,
+  "700": #2d3748,
+  "800": #1a202c,
+  "900": #171923
+);
+
+// Helper functions
+@function gg-color($color-name) {
+  @return map-get($gg-colors, $color-name);
+}
+
+@function gg-gray($shade) {
+  @return map-get($gg-grays, $shade);
+}
+
+// Mixins
+@mixin gg-button-primary {
+  background-color: $gg-primary-blue;
+  color: $gg-white;
+  border: 1px solid $gg-primary-blue;
+  
+  &:hover {
+    background-color: $gg-accent-gold;
+    border-color: $gg-accent-gold;
+    color: $gg-dark-navy;
+  }
+}
+
+@mixin gg-button-secondary {
+  background-color: transparent;
+  color: $gg-primary-blue;
+  border: 1px solid $gg-primary-blue;
+  
+  &:hover {
+    background-color: $gg-primary-blue;
+    color: $gg-white;
+  }
+}
+
+@mixin gg-card {
+  background-color: $gg-white;
+  border: 1px solid $gg-border-light;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px 0 rgba(26, 54, 93, 0.1);
+}
+
+@mixin gg-code-block {
+  background-color: $gg-dark-navy;
+  color: $gg-light-gray;
+  border-radius: 6px;
+  font-family: 'JetBrains Mono', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', monospace;
+}

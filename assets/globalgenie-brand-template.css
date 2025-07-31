@@ -1,0 +1,85 @@
+
+/* GlobalGenie Brand CSS Template */
+:root {
+    --gg-primary: #1a365d;
+    --gg-accent: #d69e2e;
+    --gg-primary-light: #2d5a87;
+    --gg-accent-light: #e6b84a;
+    --gg-success: #38a169;
+    --gg-warning: #d69e2e;
+    --gg-error: #e53e3e;
+    --gg-info: #3182ce;
+}
+
+/* GlobalGenie Brand Typography */
+.gg-heading {
+    background: linear-gradient(45deg, var(--gg-primary), var(--gg-accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    text-align: center;
+}
+
+.gg-subheading {
+    color: #666;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* GlobalGenie Brand Buttons */
+.gg-button {
+    background: linear-gradient(45deg, var(--gg-primary), var(--gg-primary-light));
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.gg-button:hover {
+    background: linear-gradient(45deg, var(--gg-accent), var(--gg-accent-light));
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(214, 158, 46, 0.3);
+}
+
+/* GlobalGenie Brand Cards */
+.gg-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid var(--gg-primary);
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+/* GlobalGenie Brand Status Indicators */
+.gg-status-success {
+    border-left: 4px solid var(--gg-success);
+    background-color: rgba(56, 161, 105, 0.1);
+}
+
+.gg-status-warning {
+    border-left: 4px solid var(--gg-warning);
+    background-color: rgba(214, 158, 46, 0.1);
+}
+
+.gg-status-error {
+    border-left: 4px solid var(--gg-error);
+    background-color: rgba(229, 62, 62, 0.1);
+}
+
+.gg-status-info {
+    border-left: 4px solid var(--gg-info);
+    background-color: rgba(49, 130, 206, 0.1);
+}
+
+/* GlobalGenie Brand Links */
+a {
+    color: var(--gg-primary);
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--gg-accent);
+}

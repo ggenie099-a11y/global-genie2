@@ -1,0 +1,80 @@
+{
+  "package": "globalgenie",
+  "status": "READY",
+  "summary": {
+    "passed": 17,
+    "failed": 0,
+    "total": 17,
+    "success_rate": 100.0
+  },
+  "tests": [
+    {
+      "test": "setup.py",
+      "passed": true
+    },
+    {
+      "test": "pyproject.toml",
+      "passed": true
+    },
+    {
+      "test": "README.md",
+      "passed": true
+    },
+    {
+      "test": "LICENSE",
+      "passed": true
+    },
+    {
+      "test": "MANIFEST.in",
+      "passed": true
+    },
+    {
+      "test": "globalgenie/__init__.py",
+      "passed": true
+    },
+    {
+      "test": "build",
+      "passed": true
+    },
+    {
+      "test": "twine",
+      "passed": true
+    },
+    {
+      "test": "import",
+      "passed": true
+    },
+    {
+      "test": "wheel",
+      "passed": true
+    },
+    {
+      "test": "sdist",
+      "passed": true
+    },
+    {
+      "test": "package_name",
+      "passed": true
+    },
+    {
+      "test": "author",
+      "passed": true
+    },
+    {
+      "test": "license",
+      "passed": true
+    },
+    {
+      "test": "python_version",
+      "passed": true
+    },
+    {
+      "test": "gg_command",
+      "passed": true
+    },
+    {
+      "test": "globalgenie_command",
+      "passed": true
+    }
+  ]
+}

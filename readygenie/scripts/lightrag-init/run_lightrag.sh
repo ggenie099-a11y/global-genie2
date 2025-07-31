@@ -1,0 +1,1 @@
+docker-compose -f readygenie/scripts/lightrag-init/docker-compose.yml up -d
